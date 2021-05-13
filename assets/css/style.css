@@ -11,31 +11,36 @@ html{
 
 header{
     text-align: left;
+    color: wheat;
+    background-color: darkblue;
+    
 }
+span {
+  font-style: italic;
 
+}
+nav{
+  font-family: 'Times New Roman', Times, serif;
+  display:inline-flex;
+  float: right;
+  font-size: 20px;
+}
 ul{
     list-style-type: none;
-    font-family: 'Times New Roman', Times, serif;
-    display:inline-flex;
-    margin-left: 600px;
 }
-
 a:link{
     text-decoration: none;
-    color: wheat;
+   
     margin-left: 15 px;
     flex: right;
 }
-a:hover{
-    transition: all 1s;
-    background-color: blue;
-}
-.none{
-    background-color: transparent;
-}
 li{
     margin-left:15px;
-
+    display: inline-block;
+}
+li:hover{
+  color:orange;
+  background-color: blue;
 }
 .box:hover{
     transition: all 2s;
@@ -60,13 +65,20 @@ h2{
     margin-right: -10px;
   }
 
-img{
+.Ahriman{
+  height: 800px;
+  width: 100%;
+  margin-bottom: 25px;
+  background-size: cover;
+  background-position: center;
+
+
+}  
+.img2{
     max-width: 400px;
     max-height: 400px;
     border-radius: 50px;    
   }
-
-
 .examples {
     flex: 4;
     padding: 50px;
@@ -77,6 +89,7 @@ img{
   }
 p{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
     margin:25px;
 
 }
@@ -98,11 +111,10 @@ section h2{
     font-size: 18px;
 
   }
-
   footer {
     text-align: center;
     text-decoration: none;
-    margin: 50px;
+    margin: 50px 0 100px 0;
     color: wheat;
 
   }
