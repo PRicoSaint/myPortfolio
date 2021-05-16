@@ -1,23 +1,29 @@
+/*This CSS file is for the Web Application for Esteban Santos' portfolio page.
+It makes use of several concepts learned in the 1st and 2nd week of SMU coding bootcamp. It is a WIP*/
+/* The root will be my general directory to change several colors without having to go to specific locations. */
 :root{
 --glow: orange;
---letters: yellow;
---titles: rgb(9, 238, 9);
+--letters: wheat;
+--titles: blue;
 }
+/* Allows the scrolling behaviour of any anchors found in the web app. Also sets the background color. */
 html{
     scroll-behavior: smooth;
     background-color: darkslateblue;
-    color: wheat;
+    color: var(--letters);
 }
 
 header{
     text-align: left;
-    color: wheat;
+    color: var(--letters);
     
 }
+/* Quick change in font style for one section of header */
 span {
   font-style: italic;
 
 }
+/* Styling for nav bar and sets it to the right of screen. */
 nav{
   font-family: 'Times New Roman', Times, serif;
   display:inline-flex;
@@ -25,31 +31,34 @@ nav{
   font-size: 30px;
   margin-bottom: 50px;
 }
+/* Removes list property */
 ul{
     list-style-type: none;
 }
+/* Removes underline and makes sure they do not turn blue when visited. */
 a:link{
-    text-decoration: none;
-    color: wheat;   
+    text-decoration: none;   
     margin-left: 15 px;
     flex: right;
 }
 a:visited {
-  color: wheat;
+  color: var(--letters);
 }
 li{
     margin-left:15px;
     display: inline-block;
     transition: 2s;
 }
+/* Hover functionalities for the box examples and links in the nav bar */
 li:hover{
-  background-color: orange;
+  background-color: var(--glow);
 }
 
 .box:hover{
     transition: ease-in-out 2s;
     box-shadow: inset 0px 0px 8px var(--glow), 0 0 15px var(--glow);
 }
+/* Styling for different headers */
 h1 {
     font-size: 40px;
     font-weight: bold;
@@ -60,74 +69,131 @@ h2{
     margin-top: 20px;
     border-radius: 50px;
 }
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-left: -10px;
-    margin-right: -10px;
-  }
-
-.Ahriman{
-  height:flex;
-  width: flex;
+/* Styling for the large picture of my favorite beach */
+.beach{
+  height: auto;
+  width: 100%;
   margin-bottom: 25px;
   background-size: cover;
   background-position: center;
 
 }  
+/* Styling for the picture of myself */
 .pictureme {
   border-radius: 20px;
   border-width: 10px;
   border-style: solid;
-  border-color: orange;
+  border-color: var(--glow);
   max-width: 400px;
   max-height: 400px;
 
 
 }
+/* The following styling is for the creation of the boxes and how they appear on the web */
+.examples {
+  flex: 4;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.bigbox{
+  background-color: #fff;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50px;
+  padding: 10px;
+  flex: 3 1 300px;
+  box-shadow: 10px 10px 5px #0c0c0c;
+  margin: 20px;
+  text-align: center;
+}
+.box {
+  background-color: #fff;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50px;
+  padding: 10px;
+  flex: 1 1 300px;
+  box-shadow: 10px 10px 5px #0c0c0c;
+  margin: 20px;
+  text-align: center; 
+}  
+/* Each image found in the examples are either the main first image (bigimg) of the smaller ones (img2). By naming classes I can leave img element alone */
+.bigimg{
+  max-width: 1200px;
+  min-width: 368px;
+  max-height: 800px;
+  border-radius: 50px;
+  flex-grow: 2;
+  flex-shrink: 0.5;
+}
 .img2{
-    max-width: 400px;
-    max-height: 400px;
+    width: 400px;
+    height: 400px;
     border-radius: 50px;   
   }
-.examples {
-    flex: 4;
-    padding: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
-  }
+/* Styling for the paragraphs found in about me section. */
 p{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
     margin:25px;
+    display:flex;
+    justify-content: start;
 
 }
-  .box {
-    background-color: #fff;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 50px;
-    padding: 10px;
-    flex: 0 0 300px;
-    box-shadow: 10px 10px 5px #0c0c0c;
-    margin: 20px;
-    text-align: center; 
-  }  
+/* Specific parameters for the text inside each example box. */
 section h2{
     padding: 20px;
-    Color: blue;
+    color: var(--titles);
     font-weight: bold;
     font-size: 18px;
 
   }
+  /* Parameters for the footer element  */
   footer {
     text-align: center;
     text-decoration: none;
     margin: 50px 0 100px 0;
-    color: wheat;
+    color:var(--letters);
 
   }
   
+
+  @media screen and (max-width: 768px) {
+    /* Changes how several elements and classes work at smaller pixel widths. */
+    nav,
+    footer {
+      font-size: 16px;
+      float: center;
+    }
+    .examples{
+      flex-direction: column;
+      justify-content: flex-start;
+
+    }
+    .bigimg{
+      width:100%;
+      height: 200px;
+    }
+    .img2{
+      width: 50%;
+      height: 200px;
+      border-width: 2px;
+      border-style: solid;
+      border-color: black;
+    }
+    .bigbox,
+    .box {
+      flex: 1 1 200px;
+      margin: 15px;
+    }
+  }
