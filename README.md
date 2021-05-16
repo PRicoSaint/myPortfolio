@@ -17,4 +17,5 @@ https://pricosaint.github.io/myPortfolio/
 
 
 **The following .gif shows the functionality of the page**
-![Moving Screenshot of my Portfolio](.\assets\images\Webapp.gif)
+![Moving Screenshot of my Portfolio](./assets/images/Webapp.gif)
+![](Webapp.gif)
