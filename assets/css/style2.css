@@ -1,3 +1,8 @@
+html{
+  scroll-behavior: smooth;
+  background-color: darkslateblue;
+}
+
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
@@ -14,6 +19,37 @@
   
   
   }
+  
+  .beach{
+    background-image: url("playa-sucia.jpg");
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bold;
+    background-color:rgb(167, 114, 114)c;
+    height: 400px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+  }
+
+.alpha{
+  color: indigo;
+
+}
+
+.beta {
+  color: rgb(255, 255, 255);
+}
+h6{
+  font-size: 30px;
+  font-family: 'Jomhuria', cursive;
+}
+p{
+  font-family: 'Roboto', sans-serif;
+}
+main{
+  /* background-color: seagreen; */
+}
+
 
   @media (min-width: 768px) {
     .bd-placeholder-img-lg {
