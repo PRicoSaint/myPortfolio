@@ -11,3 +11,7 @@ $(function () {
   $('img.playgif').hover(imageSwap, imageSwap);
 });
 
+$("#moreInfo").hide(); 
+setTimeout(function(){ 
+	$("#moreInfo").show(); 
+},5000); 
